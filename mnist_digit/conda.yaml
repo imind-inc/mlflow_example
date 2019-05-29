@@ -1,0 +1,17 @@
+# conda.yaml
+
+name: tf_example
+
+channels:
+  - defaults
+  - anaconda
+
+dependencies:
+  - python==3.7
+  - numpy==1.16.1
+  - pandas
+  - tensorflow==1.13.1
+  - keras
+  - pip:
+    - mlflow==0.9.1
+    - click

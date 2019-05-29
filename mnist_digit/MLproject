@@ -1,0 +1,15 @@
+# MLproject
+
+name: tensorflow_mnist_digit
+
+# 先ほど書いたconda.yamlのパスを指定
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters: # コマンドラインに渡す引数
+      epochs: {type: int, default: 20}
+      batch_size: {type: int, default: 32}
+    command: # 実行コマンド
+      "python train.py --epochs {epochs} --batch-size {batch_size}"
+
